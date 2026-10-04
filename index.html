@@ -193,7 +193,6 @@
           <input id="company_website" name="_honey" type="text" tabindex="-1" autocomplete="off">
         </div>
         <input type="hidden" name="_subject" value="Briefing request">
-        <input type="hidden" name="_autoresponse" value="Thank you for signing up for Luke&rsquo;s Leadership Briefing. I&rsquo;ve received your request to join. Each request is reviewed individually, and I&rsquo;ll be in touch.&#10;&#10;Luke Gustafson">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_cc" value="gustafson.luke@gmail.com">
         <input type="hidden" name="_captcha" value="false">
@@ -245,6 +244,27 @@
   }
   if (/[?&]sent=1/.test(location.search)) showThanks("");
 
+  // Branded confirmation email (Cloudflare Worker + Resend), sent only after FormSubmit accepts the request.
+  var CONFIRM_URL = "https://lukegustafson-confirm.lukegustafson.workers.dev/", TS_KEY = "0x4AAAAAAFNtQfKumzD-K5-u";
+  function turnstile(action, box, cb){
+    var go = function(){ var el = document.createElement("div"); box.appendChild(el);
+      window.turnstile.render(el, {sitekey: TS_KEY, action: action, appearance: "interaction-only", callback: cb}); };
+    if (window.turnstile) return go();
+    var s = document.createElement("script");
+    s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"; s.async = true; s.onload = go;
+    document.head.appendChild(s);
+  }
+  function sendConfirm(data){
+    var p = {kind: "briefing", data: data,
+      id: (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2)};
+    try {
+      turnstile("briefing", document.getElementById("thanks"), function(tok){
+        p.turnstile = tok;
+        fetch(CONFIRM_URL, {method: "POST", headers: {"Content-Type": "text/plain"}, body: JSON.stringify(p), keepalive: true}).catch(function(){});
+      });
+    } catch (x) {}
+  }
+
   function fail(msg){ err.textContent = msg; err.style.display = "block"; btn.disabled = false; btn.textContent = "Submit Request"; err.scrollIntoView({block: "center"}); }
 
   form.addEventListener("submit", function(e){
@@ -275,7 +295,7 @@
       .then(function(d){
         var ok = d && (d.success === true || d.success === "true");
         var pending = d && /activat/i.test(d.message || "");  // held by FormSubmit until activation
-        if (ok || pending) showThanks(first);
+        if (ok || pending) { showThanks(first); sendConfirm(payload); }
         else fail("Sorry, your request could not be sent just now. Please try again in a few minutes.");
       })
       .catch(function(){ fail("Sorry, your request could not be sent. Please check your connection and try again."); });
