@@ -3,150 +3,174 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Request Luke's Leadership Briefing</title>
-<meta name="description" content="Request access to Luke's Leadership Briefing, a Tennessee politics and news email. Each request is reviewed personally.">
+<title>Request to Join | Luke's Leadership Briefing</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#102443">
-<meta property="og:title" content="Request Luke's Leadership Briefing">
-<meta property="og:description" content="A Tennessee politics and news briefing. Requests are reviewed personally.">
-<meta property="og:image" content="banner.jpg">
+<meta property="og:title" content="Request to Join | Luke's Leadership Briefing">
+<meta property="og:image" content="https://lukegustafson.com/banner.jpg">
 <link rel="preload" as="image" href="banner.jpg">
 <style>
   :root{
-    --navy:#102443; --red:#c8102e; --gold:#c4a033; --gold-txt:#8f6d14; --gold-ed:#d3ad3b;
-    --paper:#f7f0dc; --cream:#fbfaf5; --ink:#25303d; --muted:#5f6a7a; --border:#d9dfe6; --divider:#dce1e7; --dot:#b8c4d5; --foot:#c2cede;
+    --navy:#102443; --red:#c8102e; --gold:#c4a033; --paper:#f7f0dc; --cream:#fbfaf5; --ink:#25303d;
+    --muted:#5f6a7a; --border:#d9dfe6; --foot:#c2cede;
     --sans:Arial,Helvetica,sans-serif; --serif:Georgia,'Times New Roman',serif;
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55}
   .wrap{max-width:760px;margin:0 auto;background:var(--cream);box-shadow:0 0 0 1px rgba(16,36,67,.06),0 12px 40px rgba(16,36,67,.10)}
   .banner{display:block;width:100%;height:auto;aspect-ratio:1200/450;background:#faf7f2}
-  .bar{background:var(--navy);color:#fff;padding:14px 40px;font-size:15px;line-height:1.5}
-  .bar strong{color:var(--gold-ed);font-weight:bold}
-  .bar span{color:var(--dot)}
-  .sec{padding:34px 40px 8px}
-  h1{font-family:var(--serif);color:var(--navy);font-size:34px;line-height:1.2;margin:0 0 14px}
-  .lead{font-family:var(--serif);font-size:20px;line-height:1.55;color:#263342;margin:0 0 14px}
-  p{margin:0 0 14px}
-  .note{background:var(--paper);border-left:5px solid var(--gold);padding:16px 20px;margin:20px 0 6px;font-size:16px;line-height:1.55}
-  .note b{color:var(--navy)}
-  .label{font-size:13px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;color:var(--navy);margin:0 0 10px}
-  .rule{height:3px;background:var(--gold);margin:0 0 18px;border:0}
-  ol.cover{list-style:none;margin:0;padding:0}
-  ol.cover li{position:relative;padding:12px 0 12px 40px;border-top:1px solid var(--divider)}
-  ol.cover li:first-child{border-top:0;padding-top:4px}
-  ol.cover li::before{content:counter(list-item);position:absolute;left:0;top:10px;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;font-size:13px;font-weight:bold;line-height:26px;text-align:center}
-  ol.cover li:first-child::before{top:2px}
-  ol.cover b{display:block;color:var(--navy);font-size:17px}
-  ol.cover span{display:block;color:var(--muted);font-size:15px;line-height:1.5}
-  .sched{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:4px 0 0}
-  .sched div{background:#fff;border:1px solid var(--border);border-top:4px solid var(--red);padding:10px 10px 9px;text-align:center}
-  .sched b{display:block;font-family:var(--serif);color:var(--navy);font-size:19px;line-height:1.25}
-  .sched span{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-txt);font-weight:bold}
   .card{background:#fff;border:1px solid var(--border);border-top:5px solid var(--navy);margin:30px 40px 34px;padding:30px 34px 28px}
-  .card h2{font-family:var(--serif);color:var(--navy);font-size:26px;line-height:1.25;margin:0 0 6px}
-  .card .sub{color:var(--muted);font-size:15px;margin:0 0 20px}
-  .field{margin:0 0 18px}
+  h1{font-family:var(--serif);color:var(--navy);font-size:32px;line-height:1.2;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:14px;margin:0 0 22px}
+  .legend{font-size:13px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;color:var(--navy);margin:26px 0 8px}
+  .rule{height:3px;background:var(--gold);margin:0 0 16px;border:0}
+  .field{margin:0 0 16px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+  .row3{display:grid;grid-template-columns:2fr 1fr 1.2fr;gap:0 14px}
   label{display:block;font-weight:bold;color:var(--navy);font-size:15px;margin:0 0 6px}
   label i{font-style:normal;font-weight:normal;color:var(--muted)}
-  input[type=text],input[type=email],textarea{width:100%;font:inherit;font-size:17px;color:var(--ink);background:#fff;border:1px solid #b9c3d0;border-radius:4px;padding:12px 13px;-webkit-appearance:none;appearance:none}
-  textarea{min-height:110px;resize:vertical;line-height:1.5}
-  input:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(196,160,51,.35)}
-  .hint{font-size:13px;color:var(--muted);margin:5px 0 0}
+  input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;font:inherit;font-size:17px;color:var(--ink);background:#fff;border:1px solid #b9c3d0;border-radius:4px;padding:12px 13px;-webkit-appearance:none;appearance:none}
+  select{background-image:linear-gradient(45deg,transparent 50%,var(--navy) 50%),linear-gradient(135deg,var(--navy) 50%,transparent 50%);background-position:calc(100% - 18px) 52%,calc(100% - 12px) 52%;background-size:6px 6px;background-repeat:no-repeat;padding-right:30px}
+  textarea{min-height:120px;resize:vertical;line-height:1.5}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(196,160,51,.35)}
+  .consent{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border-left:5px solid var(--gold);padding:14px 16px;margin:22px 0 20px;cursor:pointer}
+  .consent input{flex:0 0 auto;width:22px;height:22px;margin:2px 0 0;accent-color:var(--navy)}
+  .consent span{font-size:14px;line-height:1.5;color:var(--ink);font-weight:normal}
   .hp{position:absolute!important;left:-10000px!important;width:1px;height:1px;overflow:hidden}
   button{display:block;width:100%;font:inherit;font-size:18px;font-weight:bold;letter-spacing:.5px;color:#fff;background:var(--navy);border:0;border-bottom:4px solid var(--red);border-radius:4px;padding:15px 18px;cursor:pointer}
   button:hover{background:#1a3560}
   button[disabled]{opacity:.65;cursor:wait}
-  .fine{font-size:13px;line-height:1.5;color:var(--muted);margin:14px 0 0}
   .err{display:none;background:#fdecee;border-left:5px solid var(--red);color:#7a0b1c;padding:12px 16px;margin:0 0 16px;font-size:15px}
-  .thanks{display:none;text-align:left}
+  .thanks{display:none}
   .thanks .check{width:52px;height:52px;border-radius:50%;background:var(--paper);border:3px solid var(--gold);color:var(--navy);font-size:28px;line-height:46px;text-align:center;margin:0 0 14px}
+  .thanks h2{font-family:var(--serif);color:var(--navy);font-size:26px;line-height:1.3;margin:0}
   .sent .thanks{display:block}
   .sent form,.sent .formhead{display:none}
   .goldband{height:5px;background:var(--gold)}
-  footer{background:var(--navy);color:var(--foot);padding:26px 40px 30px;font-size:13px;line-height:1.6}
-  footer .fn{font-family:var(--serif);font-size:21px;color:#fff;margin:0 0 4px}
-  footer a{color:#fff}
+  footer{background:var(--navy);color:var(--foot);padding:22px 40px 26px;font-size:13px;line-height:1.6}
+  footer .fn{font-family:var(--serif);font-size:20px;color:#fff;margin:0 0 2px}
   @media (max-width:640px){
     body{font-size:16px;background:var(--cream)}
     .wrap{box-shadow:none}
-    .bar{padding:11px 14px;font-size:14px}
-    .sec{padding:24px 14px 4px}
+    .card{margin:16px 8px 22px;padding:22px 14px 20px}
     h1{font-size:27px}
-    .lead{font-size:18px}
-    .note{padding:14px 14px;margin:16px 0 4px}
-    .sched{grid-template-columns:repeat(2,1fr);gap:8px}
-    .sched b{font-size:18px}
-    .card{margin:22px 8px 24px;padding:22px 14px 20px}
-    .card h2{font-size:23px}
-    footer{padding:22px 14px 26px}
+    .row{gap:0 10px}
+    .row3{grid-template-columns:1fr 1fr;gap:0 10px}
+    .row3 .city{grid-column:1 / -1}
+    footer{padding:20px 14px 24px}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <img class="banner" src="banner.jpg" width="1200" height="450" alt="Luke's Leadership Briefing, with an engraved illustration of the Tennessee State Capitol">
-    <div class="bar"><strong>By request</strong> <span>&middot;</span> Weekdays at 7 AM, noon and 5 PM CT <span>&middot;</span> Sunday roundup at 6:08 PM CT</div>
+    <img class="banner" src="banner.jpg" width="1200" height="450" alt="Luke's Leadership Briefing">
   </header>
 
   <main>
-    <section class="sec">
-      <h1>Request the briefing</h1>
-      <p class="lead">Luke's Leadership Briefing is a concise email on Tennessee politics and news, put together by Luke Gustafson for a small group of readers.</p>
-      <p>Each edition pulls together the day's most important developments, with links to the original reporting and short notes on why they matter.</p>
-      <div class="note"><b>This is a request, not an instant signup.</b> The briefing goes to a limited list, so Luke reviews every request personally. Submitting the form does not add you to the list. If your request is approved, you will hear from <b>briefing@lukegustafson.com</b>.</div>
-    </section>
-
-    <section class="sec">
-      <div class="label">What it covers</div>
-      <hr class="rule">
-      <ol class="cover">
-        <li><b>Tennessee General Assembly</b><span>Bills, committees, special sessions and the legislative calendar.</span></li>
-        <li><b>Senate leadership</b><span>What is moving in the Senate and what it may mean for the weeks ahead.</span></li>
-        <li><b>Nashville and Middle Tennessee</b><span>Metro government, growth, schools and other local issues.</span></li>
-        <li><b>Statewide campaigns</b><span>Races for governor, Congress and the legislature.</span></li>
-      </ol>
-    </section>
-
-    <section class="sec">
-      <div class="label">When it arrives</div>
-      <hr class="rule">
-      <div class="sched">
-        <div><span>Morning</span><b>7:00 AM</b></div>
-        <div><span>Midday</span><b>12:00 PM</b></div>
-        <div><span>Evening</span><b>5:00 PM</b></div>
-        <div><span>Sunday</span><b>6:08 PM</b></div>
-      </div>
-      <p class="hint" style="margin-top:8px">Weekday editions plus a Sunday roundup. All times Central.</p>
-    </section>
-
     <section class="card" id="request" aria-live="polite">
       <div class="formhead">
-        <h2>Send a request</h2>
-        <p class="sub">It takes about a minute. Fields marked with an asterisk are required.</p>
+        <h1>Request to Join</h1>
+        <p class="sub">All fields are required unless marked optional.</p>
       </div>
       <div class="err" id="err" role="alert"></div>
-      <form id="form" action="https://formsubmit.co/gustafson.luke@gmail.com" method="POST" novalidate>
-        <div class="field">
-          <label for="name">Full name *</label>
-          <input id="name" name="name" type="text" autocomplete="name" required maxlength="120">
+      <form id="form" action="https://formsubmit.co/gustafson.luke@gmail.com" method="POST">
+        <div class="row">
+          <div class="field"><label for="first">First name</label>
+            <input id="first" name="first_name" type="text" autocomplete="given-name" required maxlength="60"></div>
+          <div class="field"><label for="last">Last name</label>
+            <input id="last" name="last_name" type="text" autocomplete="family-name" required maxlength="60"></div>
         </div>
-        <div class="field">
-          <label for="email">Email address *</label>
-          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="200">
-          <p class="hint">The address where you would like to receive the briefing.</p>
+        <div class="field"><label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="200"></div>
+        <div class="field"><label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required minlength="10" maxlength="25" placeholder="(615) 555-0123"></div>
+
+        <div class="legend">Mailing address</div>
+        <hr class="rule">
+        <div class="field"><label for="street">Street address</label>
+          <input id="street" name="street_address" type="text" autocomplete="address-line1" required maxlength="150"></div>
+        <div class="field"><label for="street2">Apt, suite, etc. <i>(optional)</i></label>
+          <input id="street2" name="address_line_2" type="text" autocomplete="address-line2" maxlength="100"></div>
+        <div class="row3">
+          <div class="field city"><label for="city">City</label>
+            <input id="city" name="city" type="text" autocomplete="address-level2" required maxlength="80"></div>
+          <div class="field"><label for="state">State</label>
+            <select id="state" name="state" autocomplete="address-level1" required>
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DE">DE</option>
+            <option value="DC">DC</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN" selected>TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+            </select></div>
+          <div class="field"><label for="zip">ZIP</label>
+            <input id="zip" name="zip" type="text" autocomplete="postal-code" inputmode="numeric" required pattern="[0-9]{5}(-[0-9]{4})?" maxlength="10" title="5-digit ZIP code"></div>
         </div>
-        <div class="field">
-          <label for="org">Organization and title *</label>
-          <input id="org" name="organization_title" type="text" autocomplete="organization-title" required maxlength="200" placeholder="e.g. Policy Director, Example Association">
-        </div>
-        <div class="field">
-          <label for="why">How do you know Luke, or why would you like the briefing? <i>(optional)</i></label>
-          <textarea id="why" name="how_you_know_luke" maxlength="1500"></textarea>
-        </div>
+
+        <div class="legend">About you</div>
+        <hr class="rule">
+        <div class="field"><label for="org">Organization</label>
+          <input id="org" name="organization" type="text" autocomplete="organization" required maxlength="150"></div>
+        <div class="field"><label for="title">Title</label>
+          <input id="title" name="title" type="text" autocomplete="organization-title" required maxlength="150"></div>
+        <div class="field"><label for="why">Why do you want to join?</label>
+          <textarea id="why" name="why_join" required maxlength="1500"></textarea></div>
+
+        <label class="consent" for="consent">
+          <input id="consent" name="consent" type="checkbox" value="Yes" required>
+          <span id="consent-text">I agree to receive emails and text messages from Luke Gustafson at the email address and phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out of texts.</span>
+        </label>
+        <input type="hidden" name="consent_text" value="I agree to receive emails and text messages from Luke Gustafson at the email address and phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out of texts.">
+        <input type="hidden" name="consent_timestamp" value="">
+
         <div class="hp" aria-hidden="true">
           <label for="company_website">Leave this field empty</label>
           <input id="company_website" name="_honey" type="text" tabindex="-1" autocomplete="off">
@@ -156,14 +180,11 @@
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://lukegustafson.com/?sent=1">
         <input type="hidden" name="_url" value="https://lukegustafson.com/">
-        <button type="submit" id="submit">Send request</button>
-        <p class="fine">Your information is used only to review your request and, if it is approved, to send the briefing. Form submissions are delivered by email through FormSubmit.</p>
+        <button type="submit" id="submit">Submit Request</button>
       </form>
       <div class="thanks" id="thanks" tabindex="-1">
         <div class="check" aria-hidden="true">&#10003;</div>
-        <h2 id="thanks-h">Thank you. Your request is in.</h2>
-        <p>Luke reviews each request personally. Nothing has been added to a mailing list yet, and no briefing will arrive unless the request is approved.</p>
-        <p>If it is approved, the briefing will come from <b>briefing@lukegustafson.com</b>. You may want to add that address to your contacts so it does not land in spam. There is no need to submit the form again.</p>
+        <h2 id="thanks-h">Thank you. Your request has been received.</h2>
       </div>
     </section>
   </main>
@@ -171,60 +192,61 @@
   <div class="goldband"></div>
   <footer>
     <div class="fn">Luke's Leadership Briefing</div>
-    <div>Tennessee politics and news, by request.</div>
     <div>&copy; <span id="yr">2026</span> Luke Gustafson</div>
   </footer>
 </div>
 
 <script>
 (function(){
-  // FormSubmit AJAX endpoint. After the form is activated, FormSubmit provides a random alias
-  // string; replace the email in both URLs below with it so the address is not in the page source.
+  // FormSubmit AJAX endpoint. After activation, FormSubmit provides a random alias string; it can
+  // replace the email in both URLs (here and the form action) so the address is not in page source.
   var FORM_ENDPOINT = "https://formsubmit.co/ajax/gustafson.luke@gmail.com";
-  var card = document.getElementById("request");
-  var form = document.getElementById("form");
-  var err = document.getElementById("err");
-  var btn = document.getElementById("submit");
+  var card = document.getElementById("request"), form = document.getElementById("form");
+  var err = document.getElementById("err"), btn = document.getElementById("submit");
   document.getElementById("yr").textContent = new Date().getFullYear();
-
   var here = location.origin + location.pathname;
   form.elements["_next"].value = here + "?sent=1";
   form.elements["_url"].value = here;
 
-  function showThanks(name){
-    var first = (name || "").trim().split(/\s+/)[0];
-    if (first) document.getElementById("thanks-h").textContent = "Thank you, " + first + ". Your request is in.";
+  function stamp(){
+    var d = new Date();
+    var ct = d.toLocaleString("en-US", {timeZone: "America/Chicago", dateStyle: "medium", timeStyle: "long"});
+    return d.toISOString() + " (" + ct + ")";
+  }
+  // Fallback (no AJAX): stamp when the box is checked.
+  document.getElementById("consent").addEventListener("change", function(){
+    form.elements["consent_timestamp"].value = this.checked ? stamp() : "";
+  });
+
+  function showThanks(first){
+    if (first) document.getElementById("thanks-h").textContent = "Thank you, " + first + ". Your request has been received.";
     card.classList.add("sent");
-    card.scrollIntoView({block:"start"});
-    document.getElementById("thanks").focus({preventScroll:true});
+    card.scrollIntoView({block: "start"});
+    document.getElementById("thanks").focus({preventScroll: true});
   }
   if (/[?&]sent=1/.test(location.search)) showThanks("");
 
-  function fail(msg){ err.textContent = msg; err.style.display = "block"; btn.disabled = false; btn.textContent = "Send request"; }
+  function fail(msg){ err.textContent = msg; err.style.display = "block"; btn.disabled = false; btn.textContent = "Submit Request"; err.scrollIntoView({block: "center"}); }
 
   form.addEventListener("submit", function(e){
     e.preventDefault();
     err.style.display = "none";
     var f = form.elements;
-    var name = f["name"].value.trim(), email = f["email"].value.trim(), org = f["organization_title"].value.trim();
-    if (!name || !email || !org) return fail("Please fill in your name, email address, and organization and title.");
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return fail("Please check your email address.");
+    if (!f["consent"].checked) return fail("Please check the consent box to submit your request.");
+    var first = f["first_name"].value.trim(), last = f["last_name"].value.trim();
     // Honeypot: real people never see this field. Pretend success and send nothing.
-    if (f["_honey"].value) { showThanks(name); return; }
+    if (f["_honey"].value) { showThanks(first); return; }
 
     btn.disabled = true; btn.textContent = "Sending...";
-    var payload = {
-      name: name,
-      email: email,
-      organization_title: org,
-      how_you_know_luke: f["how_you_know_luke"].value.trim() || "(not provided)",
-      submitted_from: here,
-      _subject: "Briefing request: " + name,
-      _template: "table",
-      _captcha: "false",
-      _replyto: email,
-      _honey: ""
-    };
+    var payload = {};
+    new FormData(form).forEach(function(v, k){ if (k !== "_next") payload[k] = typeof v === "string" ? v.trim() : v; });
+    payload.address_line_2 = payload.address_line_2 || "(none)";
+    payload.consent = "Yes, box checked";
+    payload.consent_timestamp = stamp();
+    payload.consent_page = here;
+    payload._subject = "Briefing request: " + first + " " + last;
+    payload._replyto = payload.email;
+    payload._honey = "";
     fetch(FORM_ENDPOINT, {
       method: "POST",
       headers: {"Content-Type": "application/json", "Accept": "application/json"},
@@ -232,9 +254,8 @@
     }).then(function(r){ return r.json().catch(function(){ return {}; }); })
       .then(function(d){
         var ok = d && (d.success === true || d.success === "true");
-        // Before the one-time activation, FormSubmit holds submissions and replies with an activation notice.
-        var pending = d && /activat/i.test(d.message || "");
-        if (ok || pending) showThanks(name);
+        var pending = d && /activat/i.test(d.message || "");  // held by FormSubmit until activation
+        if (ok || pending) showThanks(first);
         else fail("Sorry, your request could not be sent just now. Please try again in a few minutes.");
       })
       .catch(function(){ fail("Sorry, your request could not be sent. Please check your connection and try again."); });
