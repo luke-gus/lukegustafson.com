@@ -35,6 +35,12 @@
   select{background-image:linear-gradient(45deg,transparent 50%,var(--navy) 50%),linear-gradient(135deg,var(--navy) 50%,transparent 50%);background-position:calc(100% - 18px) 52%,calc(100% - 12px) 52%;background-size:6px 6px;background-repeat:no-repeat;padding-right:30px}
   textarea{min-height:120px;resize:vertical;line-height:1.5}
   input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(196,160,51,.35)}
+  fieldset.freq{border:0;margin:0 0 16px;padding:0;min-width:0}
+  fieldset.freq legend{display:block;font-weight:bold;color:var(--navy);font-size:15px;margin:0 0 8px;padding:0}
+  .opt{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid #b9c3d0;border-radius:4px;padding:12px 13px;margin:0 0 8px;cursor:pointer;font-weight:normal;color:var(--ink);font-size:16px}
+  .opt input{flex:0 0 auto;width:20px;height:20px;margin:0;accent-color:var(--navy)}
+  .opt b{color:var(--navy)}
+  .opt:has(input:checked){border-color:var(--navy);box-shadow:0 0 0 2px rgba(16,36,67,.15);background:#fbfaf5}
   .consent{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border-left:5px solid var(--gold);padding:14px 16px;margin:22px 0 20px;cursor:pointer}
   .consent input{flex:0 0 auto;width:22px;height:22px;margin:2px 0 0;accent-color:var(--navy)}
   .consent span{font-size:14px;line-height:1.5;color:var(--ink);font-weight:normal}
@@ -164,6 +170,13 @@
         <div class="field"><label for="why">Why do you want to join?</label>
           <textarea id="why" name="why_join" required maxlength="1500"></textarea></div>
 
+        <fieldset class="freq">
+          <legend>How often would you like to receive the briefing?</legend>
+          <label class="opt"><input type="radio" name="frequency" value="Once daily (morning, 7 AM CT)" required> <span><b>Once daily</b> (morning, 7 AM CT)</span></label>
+          <label class="opt"><input type="radio" name="frequency" value="Twice daily (7 AM and 5 PM CT)"> <span><b>Twice daily</b> (7 AM and 5 PM CT)</span></label>
+          <label class="opt"><input type="radio" name="frequency" value="Three times daily (7 AM, noon, and 5 PM CT)"> <span><b>Three times daily</b> (7 AM, noon, and 5 PM CT)</span></label>
+        </fieldset>
+
         <label class="consent" for="consent">
           <input id="consent" name="consent" type="checkbox" value="Yes" required>
           <span id="consent-text">I agree to receive emails and text messages from Luke Gustafson at the email address and phone number provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out of texts.</span>
@@ -232,6 +245,7 @@
     e.preventDefault();
     err.style.display = "none";
     var f = form.elements;
+    if (!form.querySelector('input[name="frequency"]:checked')) return fail("Please choose how often you would like to receive the briefing.");
     if (!f["consent"].checked) return fail("Please check the consent box to submit your request.");
     var first = f["first_name"].value.trim(), last = f["last_name"].value.trim();
     // Honeypot: real people never see this field. Pretend success and send nothing.
